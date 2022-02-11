@@ -1,5 +1,9 @@
 'use strict';
 
+/*
+Manage the apperance of the text, normalize the text from the input, clear recipe section, clear filters and sortby title (for filters buttons)
+*/
+
 export default class Utils {
     // search starts from 3 characters
     static isValid(value) {
@@ -36,7 +40,7 @@ export default class Utils {
         return elt.innerHTML = '';
     }
 
-    // Collect all the ingredients/appliance/ustensils, and sort them alphabetically
+    // Collect all the ingredients/appliance/ustensils, and sort them alphabetically in each filter
     static sortByTitle(array) {
         let arrayNoSort = [...new Set(array)];
         let arraySort = arrayNoSort.sort((a, b) => {
