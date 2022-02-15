@@ -1,4 +1,4 @@
-'use strict';
+'use strict';////
 
 import DomService from './DomService.js';
 import Messages from './Messages.js';
