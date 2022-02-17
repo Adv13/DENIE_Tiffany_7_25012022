@@ -43,44 +43,35 @@ export default class Search {
         return resultInput;
     }
 
-    // search by tags for ingredients
-    static searchByIngTags(recipes, tagIng) {
-        let resultIng = [];
 
-        recipes.forEach(recipe => {
-            if (recipe.ingredients.some(elt => Utils.normalizeText(elt.ingredient).includes(tagIng))) {
-                resultIng.push(recipe);
+    static searchByTags(){
+        let selected = Utils.getFiltersWithClassActivated();
+        let matched = [];
+        let notMatched = [];
+
+        document.querySelectorAll('#mainContent > article').forEach(article => {
+            if (Utils.normalizeText(article.getAttribute('data-filter')).includes(selected)){
+                matched.push(article);
+            }else{
+                notMatched.push(article);
             }
-        });
-
-        return resultIng;
-    }
-
-    // search by tags for appliances
-    static searchByAppTags(recipes, tagApp) {
-        let resultApp = [];
-
-        recipes.forEach(recipe => {
-            if (Utils.normalizeText(recipe.appliance).includes(tagApp)) {
-                resultApp.push(recipe);
-            }
-        });
-
-        return resultApp;
-    }
-
-    // search by tags for ustensils
-    static searchByUstTags(recipes, tagUst) {
-        let resultUst = [];
-
-        recipes.forEach(recipe => {
-            recipe.ustensils.forEach(ust => {
-                if (Utils.normalizeText(ust).includes(tagUst)) {
-                    resultUst.push(recipe);
-                }
             });
-        });
 
-        return resultUst;
+        return {
+            'show' : matched,
+            'hide' : notMatched
+        };
+    }
+
+    static showRecipesFiltered(elt){
+        return elt.forEach(e =>{
+            e.style.display = 'block';
+        })
+    }
+
+    static hideRecipesFiltered(elt){
+        return elt.forEach(e => {
+            e.style.display = 'none';
+        });
     }
 }
