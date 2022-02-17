@@ -53,4 +53,28 @@ export default class Utils {
 
         return arraySort;
     }
+
+    static getFiltersWithClassActivated(){
+        let currentFilters = document.querySelectorAll('li.selected');
+        let filterSelected = [];
+
+        currentFilters.forEach(function(currentFilter){
+            filterSelected.push(Utils.normalizeText(currentFilter.getAttribute("data-filter")));
+        });
+
+        return filterSelected;
+    }
+
+    static showRecipesFiltered(elt){
+        return elt.forEach(e =>{
+            e.style.display ='block';
+        });
+    }
+
+    static hideRecipesFiltered(elt){
+        return elt.forEach(e => {
+            e.style.display = 'non';
+        });
+    }
+
 }
