@@ -63,15 +63,9 @@ export default class Badges {
 
     static resetSection(event, eltBadge, recipes) {
         event.target.classList.remove('selected');
+        Utils.clearRecipesSection();
         this.hideTag(eltBadge);
         Messages.buildResultMessageWithResult(recipes);
-        Utils.clearRecipesSection();
         DomService.buildResult(recipes);
-        Utils.clearFilters(document.getElementById('ingredientsExample'));
-        Ingredients.fillIngredients(DataLogic.getAllIngredients(recipes));
-        Utils.clearFilters(document.getElementById('appareilExample'));
-        Appliances.fillAppliances(DataLogic.getAllAppliances(recipes));
-        Utils.clearFilters(document.getElementById('ustensilesExample'));
-        Ustensils.fillUstensils(DataLogic.getAllUstensils(recipes));
     }
 }
