@@ -54,6 +54,7 @@ export default class Utils {
         return arraySort;
     }
 
+    // get the elements holding the 'activated' class
     static getFiltersWithClassActivated(){
         let currentFilters = document.querySelectorAll('li.selected');
         let filterSelected = [];
