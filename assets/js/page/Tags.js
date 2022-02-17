@@ -3,10 +3,6 @@
 import DomService from './DomService.js';
 import Messages from './Messages.js';
 import Utils from '../utilities/Utils.js';
-import Ingredients from '../filters/Ingredients.js';
-import Appliances from '../filters/Appliances.js';
-import Ustensils from '../filters/Ustensils.js';
-import DataLogic from '../utilities/DataLogic.js';
 
 /*
 Manage the tags when a user selectes one of the items under the main searchbar (show it and/or hide it) and reset the section when the tag is closed.
