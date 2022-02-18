@@ -42,7 +42,6 @@
 
 #mainContent>article>div.recipeInfo>div.recipeInstructions>span {
 	display:block;
-	height:50%;
 	overflow: hidden;
 	/*white-space: nowrap;*/
 	text-overflow: ellipsis;
