@@ -7,11 +7,8 @@ SEARCH BAR : Manage the main searchbar buy updating the text in the input (norma
 
 SEARCH INPUT FILTER : Manage the search input filter bar buy updating the text in the input (normalizetext),create a table 'resultInput' and return it.
 
-SEARCH FILTER TAG INGREDIENTS : Manage the search filter tag 'ing' bar buy updating the text in the input (normalizetext),create a table 'resultIng' and return it.
-
-SEARCH FILTER TAG APPLIANCES : Manage the search filter tag 'app' bar buy updating the text in the input (normalizetext),create a table 'resultApp' and return it.
-
-SEARCH FILTER TAG USTENSILES : Manage the search filter tag bar 'ust' buy updating the text in the input (normalizetext),create a table 'resultUst' and return it.
+SEARCH BY TAGS : Take all elements (articles) with the activated (when you click on one element) from Utils class and take all article elements in the main content section in order to make a comparison between them (without forgetting to normalizetext + giving 'data-filter' class name).
+For each element, if the element in 'filterSelected' matches the element in 'selected', push the element in the table 'matched'. If not, push the element in the table 'notMatched'. Display the first one, hide the second one.
 
 */
 export default class Search {

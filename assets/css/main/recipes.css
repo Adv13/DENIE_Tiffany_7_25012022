@@ -32,10 +32,23 @@
 	-webkit-box-orient: vertical;
 	-webkit-line-clamp: 7;
 	display: -webkit-box;
+	padding:2px;
+	margin-bottom: 10px;
 	font-size: .8rem;
 	overflow: hidden;
 	text-overflow: ellipsis;
 	width: 50%;
+}
+
+#mainContent>article>div.recipeInfo>div.recipeInstructions>span {
+	/*display:inline-block;*/
+	height:50%;
+	overflow: hidden;
+	/*white-space: nowrap;*/
+	text-overflow: ellipsis;
+	padding:2px;
+	font-size: .9rem;
+
 }
 
 #mainContent>article>div.recipeTitle {
