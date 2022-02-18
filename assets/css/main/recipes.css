@@ -41,7 +41,7 @@
 }
 
 #mainContent>article>div.recipeInfo>div.recipeInstructions>span {
-	/*display:inline-block;*/
+	display:block;
 	height:50%;
 	overflow: hidden;
 	/*white-space: nowrap;*/
