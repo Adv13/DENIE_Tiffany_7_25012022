@@ -59,7 +59,7 @@
 	margin-right: 1rem;
 	overflow: hidden;
 	text-overflow: ellipsis;
-	white-space: nowrap;
+	/*white-space: nowrap;*/
 }
 
 #mainContent>article>div.recipeTitle>h2,
