@@ -41,8 +41,7 @@
 }
 
 #mainContent>article>div.recipeInfo>div.recipeInstructions>span {
-	/*display:inline-block;*/
-	height:50%;
+	display:block;
 	overflow: hidden;
 	/*white-space: nowrap;*/
 	text-overflow: ellipsis;
@@ -60,7 +59,7 @@
 	margin-right: 1rem;
 	overflow: hidden;
 	text-overflow: ellipsis;
-	white-space: nowrap;
+	/*white-space: nowrap;*/
 }
 
 #mainContent>article>div.recipeTitle>h2,
