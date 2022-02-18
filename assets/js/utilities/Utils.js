@@ -74,7 +74,7 @@ export default class Utils {
 
     static hideRecipesFiltered(elt){
         return elt.forEach(e => {
-            e.style.display = 'non';
+            e.style.display = 'none';
         });
     }
 
