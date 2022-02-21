@@ -16,7 +16,9 @@ export default class Search {
         let recipesMatched = [];
 
         recipesApiResult.forEach(recipe => {
-            if (Utils.normalizeText(recipe.name).includes(Utils.normalizeText(value)) || Utils.normalizeText(recipe.description).includes(Utils.normalizeText(value)) || recipe.ingredients.some(elt => Utils.normalizeText(elt.ingredient).includes(value))) {
+            if (Utils.normalizeText(recipe.name).includes(Utils.normalizeText(value)) 
+            || Utils.normalizeText(recipe.description).includes(Utils.normalizeText(value)) 
+            || recipe.ingredients.some(elt => Utils.normalizeText(elt.ingredient).includes(value))) {
                 recipesMatched.push(recipe);
             };
         });
